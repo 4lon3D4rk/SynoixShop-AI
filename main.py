@@ -4,8 +4,6 @@ import google.generativeai as genai
 from google.api_core import exceptions
 from keep_alive import keep_alive
 
-keep_alive()
-
 # --- AYARLAR ---
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -178,4 +176,5 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+keep_alive()
 bot.run(DISCORD_TOKEN)
