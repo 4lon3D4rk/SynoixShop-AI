@@ -4,10 +4,6 @@ import google.generativeai as genai
 from google.api_core import exceptions
 from keep_alive import keep_alive
 
-# --- AYARLAR ---
-with open('config.json', 'r') as f:
-    config = json.load(f)
-
 DISCORD_TOKEN = os.environ("DC_TOKEN")
 GEMINI_API_KEY = os.environ("API_KEY")
 
