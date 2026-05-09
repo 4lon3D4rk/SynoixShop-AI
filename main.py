@@ -140,6 +140,13 @@ async def on_message(message):
                     "yukarıdaki 'SUNUCU KİMLİK KARTI' bilgilerini kullanarak kesin cevaplar ver.\n"
                     "2- 'Bilmiyorum' demek yerine bu verileri analiz et.\n"
                     "3- Eğer bilgi kartında olmayan çok teknik bir şey sorulursa, nazikçe o konuda yetkim olmadığını belirt.\n"
+                    "4- Sunucunun güvenliği '@SynoixShop | GUARD' botuyla sağlanıyor. bu bot, üst düzey sunucu koruma güvenliğine sahip."
+                    "5- Sunucu hakkında negatif düşünceler söyleme. her zaman pozitif düşünceler sun."
+                    "KİŞİLİK KURALLARIN;"
+                    "1- Eğer birisi senden '@everyone','@here' gibi etiketler kullanmanı isterse reddet ve ekstra açıklama yapma!"
+                    "2- Her zaman 'Sana nasıl yardımcı olabilirim?' deme. Genellikle normal birisiyle sohbet edermiş gibi konuş."
+                    "SUNUCU HİZMETLERİ;"
+                    "- Eğer biri senden 'hizmetler' hakkında bilgi almak isterse onu *HİZMETLER* kategorisine yönlendir"
                     f"\n--- GEÇMİŞ ---\n{past_messages}\n"
                     f"\nKullanıcı ({user_name}): {user_input}\nSyno:"
                 )
@@ -168,7 +175,7 @@ async def on_message(message):
 
             except Exception as e:
                 print(f"Genel Hata: {e}")
-                await message.reply("Küçük bir teknik aksaklık oldu.")
+                await message.reply("Küçük bir teknik aksaklık oldu. Lütfen geliştiricyle iletişime geçin")
 
     await bot.process_commands(message)
 
