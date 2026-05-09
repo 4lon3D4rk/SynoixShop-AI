@@ -4,8 +4,8 @@ import google.generativeai as genai
 from google.api_core import exceptions
 from keep_alive import keep_alive
 
-DISCORD_TOKEN = os.environ("DC_TOKEN")
-GEMINI_API_KEY = os.environ("API_KEY")
+DISCORD_TOKEN = os.environ["DC_TOKEN"]
+GEMINI_API_KEY = os.environ["API_KEY"]
 
 genai.configure(api_key=GEMINI_API_KEY)
 
