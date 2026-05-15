@@ -102,6 +102,16 @@ async def on_ready():
         await guild.chunk() 
     print(f'{bot.user} hazır ve sunucuları taradı!')
 
+@bot.command()
+@commands.has_permissions(adminstrator=True)
+async def reload(ctx):
+    try:
+        for guild in bot.guilds:
+            await guild.chunk()
+        await ctx.send("Başarılı")
+    except Exception as e:
+        await ctx.send(f"Hata: {e}")
+
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
