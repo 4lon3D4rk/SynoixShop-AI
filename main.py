@@ -103,7 +103,7 @@ async def on_ready():
     print(f'{bot.user} hazır ve sunucuları taradı!')
 
 @bot.command()
-@commands.has_permissions(adminstrator=True)
+@commands.has_permissions(administrator=True)
 async def reload(ctx):
     try:
         for guild in bot.guilds:
